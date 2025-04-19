@@ -12,9 +12,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      DB_URL: ${{ vars.DB_URL }}
+      DB_USERNAME: ${{ vars.DB_USERNAME }}
+      DB_PASSWORD: ${{ vars.DB_PASSWORD }}
     permissions:
       contents: read #This is required for actions/checkout
-
     steps:
       - uses: actions/checkout@v4
 
