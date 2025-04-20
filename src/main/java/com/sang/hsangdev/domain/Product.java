@@ -21,4 +21,7 @@ public class Product {
 
     @Column(name = "ProductName")
     private String productName;
+
+    @Column(name = "ProductType")
+    private String productType;
 }
